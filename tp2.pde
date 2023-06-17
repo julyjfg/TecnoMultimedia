@@ -2,7 +2,7 @@
 
  Julian Ferrari Goñi
  Comision 5
- link del video explicativo :)
+ https://youtu.be/O_TJiMaGY0E
  */
 
 
