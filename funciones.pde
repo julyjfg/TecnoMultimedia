@@ -134,31 +134,31 @@ String cargarTextos(int pos) {
 void botones(int pantallas, String[] textos) {
   if (pantallas==0) {
 
-    generarBoton(posXBotonIniciar, posYBotonIniciar, tamanioAnchoBotones, tamanioAltoBotones, radioDelBoton, tamanioTexto, textos[1]);
-    generarBoton(posXBotonCreditos, posYBotonCreditos, tamanioAnchoBotones, tamanioAltoBotones, radioDelBoton, tamanioTexto, textos[2]);
+    generarBoton(posXBotonIniciar, posYBotonIniciar, tamanioAnchoBotones, tamanioAltoBotones, radioDelBoton, tamanioTexto, textos[1], colorBotonIniciar, colorTextoIniciar);
+    generarBoton(posXBotonCreditos, posYBotonCreditos, tamanioAnchoBotones, tamanioAltoBotones, radioDelBoton, tamanioTexto, textos[2], colorBotonCreditos, colorTextoCreditos);
   }
   if (pantallas==1) {
-    generarBoton(posXBotonInicioDeCreditos, posYBotonInicioDeCreditos, tamanioAnchoBotones, tamanioAltoBotones, radioDelBoton, tamanioTexto, textos[3]);
+    generarBoton(posXBotonInicioDeCreditos, posYBotonInicioDeCreditos, tamanioAnchoBotones, tamanioAltoBotones, radioDelBoton, tamanioTexto, textos[3], colorBotonInicioDeCreditos, colorTextoInicioDeCreditos);
   }
   if ((pantallas==2)||(pantallas==3)||(pantallas==5)||(pantallas==6)||(pantallas==7)) {
 
-    generarBoton(posXBotonSiguiente, posYBotonSiguiente, tamanioAnchoBotones, tamanioAltoBotones, radioDelBoton, tamanioTexto, textos[8]);
+    generarBoton(posXBotonSiguiente, posYBotonSiguiente, tamanioAnchoBotones, tamanioAltoBotones, radioDelBoton, tamanioTexto, textos[8], colorBotonSiguiente, colorTextoSiguiente);
   }
   if ((pantallas==4)||(pantallas==8)) {
 
-    generarBoton(posXBotonA, posYBotonA, tamanioAnchoBotonesAYB, tamanioAltoBotonesAYB, radioDelBotonAYB, tamanioTexto, textos[9]);
-    generarBoton(posXBotonB, posYBotonB, tamanioAnchoBotonesAYB, tamanioAltoBotonesAYB, radioDelBotonAYB, tamanioTexto, textos[10]);
+    generarBoton(posXBotonA, posYBotonA, tamanioAnchoBotonesAYB, tamanioAltoBotonesAYB, radioDelBotonAYB, tamanioTexto, textos[9], colorBotonA, colorTextoA);
+    generarBoton(posXBotonB, posYBotonB, tamanioAnchoBotonesAYB, tamanioAltoBotonesAYB, radioDelBotonAYB, tamanioTexto, textos[10], colorBotonB, colorTextoB);
   }
   if (pantallas==9) {
 
-    generarBoton(posXBotonInicioFinal, posYBotonInicioFinal, tamanioAnchoBotones, tamanioAltoBotones, radioDelBoton, tamanioTexto, textos[3]);
+    generarBoton(posXBotonInicioFinal, posYBotonInicioFinal, tamanioAnchoBotones, tamanioAltoBotones, radioDelBoton, tamanioTexto, textos[3], colorBotonInicioFinal, colorTextoInicioFinal);
   }
   if ((pantallas==10)||(pantallas==11)) {
-    generarBoton(posXBotonReiniciar, posYBotonReiniciar, tamanioAnchoBotones, tamanioAltoBotones, radioDelBoton, tamanioTexto, textos[11]);
-    generarBoton(posXBotonVolver, posYBotonVolver, tamanioAnchoBotones, tamanioAltoBotones, radioDelBoton, tamanioTexto, textos[12]);
+    generarBoton(posXBotonReiniciar, posYBotonReiniciar, tamanioAnchoBotones, tamanioAltoBotones, radioDelBoton, tamanioTexto, textos[11], colorBotonReiniciar, colorTextoReiniciar);
+    generarBoton(posXBotonVolver, posYBotonVolver, tamanioAnchoBotones, tamanioAltoBotones, radioDelBoton, tamanioTexto, textos[12], colorBotonVolver, colorTextoVolver);
   }
 }
-void generarBoton(int posX, int posY, int ancho, int alto, int radio, int tamTexto, String texto) {
+void generarBoton(int posX, int posY, int ancho, int alto, int radio, int tamTexto, String texto, color colorBoton, color colorTexto) {
   push();
   rectMode(CENTER);
   fill(colorBoton);
@@ -181,7 +181,7 @@ void botonPresionado() {
     }
   }
   if ((pantallas==1)||(pantallas==9)) {
-    if (((dist(mouseX, mouseY, posXBotonInicioDeCreditos, posYBotonInicioDeCreditos) < radioDelBoton))||((dist(mouseX, mouseY, posXBotonInicioFinal, posYBotonInicioFinal) < radioDelBoton))) {
+    if (((dist(mouseX, mouseY, posXBotonInicioDeCreditos, posYBotonInicioDeCreditos) <radioDelBoton))||((dist(mouseX, mouseY, posXBotonInicioFinal, posYBotonInicioFinal) < radioDelBoton))) {
       pantallas=0;
     }
   }
@@ -210,6 +210,30 @@ void botonPresionado() {
     }
     if ((dist(mouseX, mouseY, posXBotonVolver, posYBotonVolver) < radioDelBoton)&&(pantallas==10)) {
       pantallas=8;
+    }
+  }
+}
+void cabioColorYTexto() {
+  if (pantallas==0) {
+    if ((mouseX>posXBotonIniciar)&&(mouseX<posXBotonIniciar+tamanioAnchoBotones)&&(mouseY>posYBotonIniciar)&&(mouseY<posYBotonIniciar+tamanioAltoBotones)) {
+      colorBotonIniciar=color(240, 87, 87);
+      colorTextoIniciar=color(209, 192, 192);
+    } else {
+      colorBotonIniciar=color(255);
+      colorTextoIniciar=color(0);
+    }
+  }
+  if ((pantallas==1)||(pantallas==9)) {
+    if (((mouseX>posXBotonInicioDeCreditos)&&(mouseX<posXBotonInicioDeCreditos+tamanioAnchoBotones)&&(mouseY>posYBotonInicioDeCreditos)&&(mouseY<posYBotonInicioDeCreditos+tamanioAltoBotones))||((mouseX>posXBotonInicioFinal)&&(mouseX<posXBotonInicioFinal+tamanioAnchoBotones)&&(mouseY>posYBotonInicioFinal)&&(mouseY<posYBotonInicioFinal+tamanioAltoBotones))) {
+      colorBotonInicioDeCreditos=color(0, 255, 0);
+      colorTextoInicioDeCreditos=color(255);
+      colorBotonInicioFinal=color(0, 255, 0);
+      colorTextoInicioFinal=color(255);
+    } else {
+      colorBotonInicioDeCreditos=color(255);
+      colorTextoInicioDeCreditos=color(0);
+      colorBotonInicioFinal=color(255);
+      colorTextoInicioFinal=color(0);
     }
   }
 }

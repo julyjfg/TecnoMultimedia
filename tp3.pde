@@ -5,8 +5,7 @@ int pantallas;
 
 String [] listaTextos = new String[22];
 
-int colorBoton;
-int colorTexto;
+
 
 int tamanioAnchoBotones;
 int tamanioAltoBotones;
@@ -14,30 +13,51 @@ int radioDelBoton;
 
 int posXBotonIniciar;
 int posYBotonIniciar;
+color colorBotonIniciar;
+color colorTextoIniciar;
 
 int posXBotonCreditos;
 int posYBotonCreditos;
+color colorBotonCreditos;
+color colorTextoCreditos;
 
 int posXBotonSiguiente;
 int posYBotonSiguiente;
+color colorBotonSiguiente;
+color colorTextoSiguiente;
+
 
 int posXBotonVolver;
 int posYBotonVolver;
+color colorBotonVolver;
+color colorTextoVolver;
 
 int posXBotonReiniciar;
 int posYBotonReiniciar;
+color colorBotonReiniciar;
+color colorTextoReiniciar;
 
 int posXBotonInicioDeCreditos;
 int posYBotonInicioDeCreditos;
+color colorBotonInicioDeCreditos;
+color colorTextoInicioDeCreditos;
 
 int posXBotonInicioFinal;
 int posYBotonInicioFinal;
+color colorBotonInicioFinal;
+color colorTextoInicioFinal;
 
 int posXBotonA;
 int posYBotonA;
+color colorBotonA;
+color colorTextoA;
+
 
 int posXBotonB;
 int posYBotonB;
+color colorBotonB;
+color colorTextoB;
+
 
 int tamanioAnchoBotonesAYB;
 int tamanioAltoBotonesAYB;
@@ -74,8 +94,32 @@ void setup() {
 
   tamanioTexto=20;
 
-  colorBoton=255;
-  colorTexto=0;
+  colorBotonIniciar=255;
+  colorTextoIniciar=0;
+
+  colorBotonCreditos=255;
+  colorTextoCreditos=0;
+
+  colorBotonSiguiente=255;
+  colorTextoSiguiente=0;
+
+  colorBotonVolver=255;
+  colorTextoVolver=0;
+
+  colorBotonReiniciar=255;
+  colorTextoReiniciar=0;
+
+  colorBotonInicioDeCreditos=255;
+  colorTextoInicioDeCreditos=0;
+
+  colorBotonInicioFinal=255;
+  colorTextoInicioFinal=0;
+
+  colorBotonA=255;
+  colorTextoA=0;
+  
+  colorBotonB=255;
+  colorTextoB=0;
 
   tamanioAnchoBotones=100;
   tamanioAltoBotones=50;
@@ -119,4 +163,8 @@ void draw() {
 
 void mousePressed() {
   botonPresionado();
+}
+
+void mouseMoved() {
+  cabioColorYTexto();
 }
