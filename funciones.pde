@@ -119,25 +119,17 @@ String cargarTextos(int pos) {
     texto="Historia de pantalla 9";//Hist pantalla 8
     break;
   case 20:
-    texto="Historia de pantalla 9";//Hist pantalla 9 Final 
+    texto="Historia de pantalla 9";//Hist pantalla 9 Final
     break;
-    case 21:
+  case 21:
     texto="Historia de pantalla 10";//Hist pantalla 10 Final alternativo
     break;
-        case 22:
+  case 22:
     texto="Historia de pantalla 11";//Hist pantalla 11 Final alternativo
     break;
   }
   return texto;
 }
-void textosDeLaHistoria(int pantallas, String [] textos){
-switch(pantallas){
-case 0:
-
-break;
-}
-}
-
 
 void botones(int pantallas, String[] textos) {
   if (pantallas==0) {
@@ -162,17 +154,62 @@ void botones(int pantallas, String[] textos) {
     generarBoton(posXBotonInicioFinal, posYBotonInicioFinal, tamanioAnchoBotones, tamanioAltoBotones, radioDelBoton, tamanioTexto, textos[3]);
   }
   if ((pantallas==10)||(pantallas==11)) {
-    generarBoton(posXBotonReiniciar,posYBotonReiniciar,tamanioAnchoBotones, tamanioAltoBotones, radioDelBoton, tamanioTexto,textos[11]);
-    generarBoton(posXBotonVolver,posYBotonVolver,tamanioAnchoBotones, tamanioAltoBotones, radioDelBoton, tamanioTexto,textos[12]);
+    generarBoton(posXBotonReiniciar, posYBotonReiniciar, tamanioAnchoBotones, tamanioAltoBotones, radioDelBoton, tamanioTexto, textos[11]);
+    generarBoton(posXBotonVolver, posYBotonVolver, tamanioAnchoBotones, tamanioAltoBotones, radioDelBoton, tamanioTexto, textos[12]);
   }
 }
 void generarBoton(int posX, int posY, int ancho, int alto, int radio, int tamTexto, String texto) {
   push();
   rectMode(CENTER);
+  fill(colorBoton);
   rect(posX, posY, ancho, alto, radio);
   textAlign(CENTER);
   textSize(tamTexto);
-  fill(0);
+  fill(colorTexto);
   text(texto, posX, posY);
   pop();
+}
+
+void botonPresionado() {
+  if (pantallas == 0) {
+    if (dist(mouseX, mouseY, posXBotonIniciar, posYBotonIniciar) < radioDelBoton) {
+      pantallas= 2;
+      println("Boton Iniciar Activado");
+    } else if (dist(mouseX, mouseY, posXBotonCreditos, posYBotonCreditos) < radioDelBoton) {
+      pantallas = 1;
+      println("Boton Creditos Activado");
+    }
+  }
+  if ((pantallas==1)||(pantallas==9)) {
+    if (((dist(mouseX, mouseY, posXBotonInicioDeCreditos, posYBotonInicioDeCreditos) < radioDelBoton))||((dist(mouseX, mouseY, posXBotonInicioFinal, posYBotonInicioFinal) < radioDelBoton))) {
+      pantallas=0;
+    }
+  }
+  if ((pantallas==2)||(pantallas==3)||(pantallas==5)||(pantallas==6)||(pantallas==7)) {
+    if (dist(mouseX, mouseY, posXBotonSiguiente, posYBotonSiguiente) < radioDelBoton) {
+      pantallas++;
+    }
+  }
+  if ((pantallas==4)||(pantallas==8)) {
+    if ((dist(mouseX, mouseY, posXBotonA, posYBotonA) < radioDelBotonAYB)&&(pantallas==4)) {
+      pantallas=11;
+    }
+    if ((dist(mouseX, mouseY, posXBotonA, posYBotonA) < radioDelBotonAYB)&&(pantallas==8)) {
+      pantallas=10;
+    }
+    if (dist(mouseX, mouseY, posXBotonB, posYBotonB) < radioDelBotonAYB) {
+      pantallas++;
+    }
+  }
+  if ((pantallas==10)||(pantallas==11)) {
+    if (dist(mouseX, mouseY, posXBotonReiniciar, posYBotonReiniciar) < radioDelBoton) {
+      pantallas=0;
+    }
+    if ((dist(mouseX, mouseY, posXBotonVolver, posYBotonVolver) < radioDelBoton)&&(pantallas==11)) {
+      pantallas=4;
+    }
+    if ((dist(mouseX, mouseY, posXBotonVolver, posYBotonVolver) < radioDelBoton)&&(pantallas==10)) {
+      pantallas=8;
+    }
+  }
 }

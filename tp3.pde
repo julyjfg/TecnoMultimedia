@@ -5,6 +5,9 @@ int pantallas;
 
 String [] listaTextos = new String[22];
 
+int colorBoton;
+int colorTexto;
+
 int tamanioAnchoBotones;
 int tamanioAltoBotones;
 int radioDelBoton;
@@ -64,16 +67,15 @@ void setup() {
 
   size(600, 600);
   background(0);
-  
+
   cargarListas(listaImagenes, listaTextos);
 
   pantallas=0;
 
   tamanioTexto=20;
 
-
-
-
+  colorBoton=255;
+  colorTexto=0;
 
   tamanioAnchoBotones=100;
   tamanioAltoBotones=50;
@@ -100,7 +102,7 @@ void setup() {
 
   posXBotonA=(width/2)-200;
   posYBotonA=200;
-  
+
   posXBotonB=(width/2)+200;
   posYBotonB=200;
 
@@ -116,9 +118,5 @@ void draw() {
 }
 
 void mousePressed() {
-  pantallas++;
-  println(mouseX, mouseY);
-  if (pantallas>11) {
-    pantallas=0;
-  }
+  botonPresionado();
 }
