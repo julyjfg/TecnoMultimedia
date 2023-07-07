@@ -5,11 +5,17 @@ int pantallas;
 
 String [] listaTextos = new String[22];
 
-
+boolean okIniciar;
+boolean okCreditos;
+boolean okSiguiente;
+boolean okInicio;
+boolean okA;
+boolean okB;
+boolean okVolver;
+boolean okReiniciar;
 
 int tamanioAnchoBotones;
 int tamanioAltoBotones;
-int radioDelBoton;
 
 int posXBotonIniciar;
 int posYBotonIniciar;
@@ -61,7 +67,7 @@ color colorTextoB;
 
 int tamanioAnchoBotonesAYB;
 int tamanioAltoBotonesAYB;
-int radioDelBotonAYB;
+
 
 int tamanioTexto;
 
@@ -87,6 +93,8 @@ void setup() {
 
   size(600, 600);
   background(0);
+  rectMode(CENTER);
+  textAlign(CENTER);
 
   cargarListas(listaImagenes, listaTextos);
 
@@ -123,11 +131,11 @@ void setup() {
 
   tamanioAnchoBotones=100;
   tamanioAltoBotones=50;
-  radioDelBoton=10;
+
 
   tamanioAnchoBotonesAYB=30;
   tamanioAltoBotonesAYB=40;
-  radioDelBotonAYB=10;
+
 
   posXBotonIniciar=width/2;
   posYBotonIniciar= height/2-50;
