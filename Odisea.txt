@@ -1,0 +1,39 @@
+Pantalla 1:
+Odiseo, disfrazado como mendigo, se encuentra en el palacio de Ítaca. Observa con atención a los pretendientes que han estado abusando de su casa y su esposa. El aire está cargado de tensión y secretos.
+
+Pantalla 2:
+Penélope anuncia que el arco de Odiseo será el premio para quien pueda tensarlo y disparar una flecha a través de los aros de doce hachas. Los pretendientes se alborotan, discutiendo entre ellos mientras Odiseo permanece en silencio, vigilante
+
+Pantalla 3:
+Odiseo quiere hacer la prueba. Los pretendientes se niegan a permitir que Odiseo intente la prueba del arco. Se burlan de él, menospreciando su apariencia de mendigo. Ahora elige. 
+
+Odiseo dudando de su habilidad:
+
+pantalla 10:
+Odiseo, desconfiando de su propia habilidad, decide no participar en el certamen de Penélope. Uno de los pretendientes, con destreza, acierta a pasar la flecha a través de las doce argollas. Los pretendientes celebran victoriosos su éxito. El reino de Ítaca cae en manos de los pretendientes y la opresión se extiende. Homero, Telemaco y Penélope son asesinados en una cena, mientras Odiseo es capturado y ejecutado. La gloriosa ciudad de Ítaca es sometida bajo el dominio de los pretendientes.
+
+Odiseo no duda de sus habilidades.
+
+Pantalla 4:
+La sala se llena de risas y burlas mientras los pretendientes se mofan de Odiseo por su audacia. Lo ridiculizan y cuestionan su habilidad para manejar el arco y disparar la flecha. Odiseo, firme en su determinación, mantiene la calma y se prepara para demostrar su valía.
+
+Pantalla 5:
+Justo cuando Odiseo se acerca al arco, uno de los pretendientes, lleno de envidia y desdén, se interpone entre él y el objetivo. Penélope, interviniendo como anfitriona, exige que Odiseo tenga la oportunidad de probar la prueba, recordando su hospitalidad hacia el mendigo desconocido.
+
+Pantalla 6:
+Es el turno de Odiseo de intentar tensar el arco y disparar la flecha. La multitud observa con incredulidad. Todos los ojos están puestos en él, pero una sirvienta, en un momento de descuido, se encuentra en una encrucijada. Puedes decidir si la sirvienta es fiel a Odiseo o si prefiere traicionarlo murmurando su nombre en la cena.
+
+Si la sirvienta es fiel a Odiseo:
+
+Pantalla 7:
+Con determinación y habilidad, Odiseo tensa el arco con facilidad y dispara la flecha con precisión a través de los aros de doce hachas. El silencio cae sobre la sala mientras todos contemplan el increíble logro de Odiseo. Los pretendientes quedan atónitos y se dan cuenta de su error al subestimar al mendigo. El destino de Ítaca da un giro repentino.
+
+pantalla 8:La furia de Odiseo se desata y, con la ayuda de su hijo Telémaco y dos fieles sirvientes, se abalanza sobre los pretendientes. Uno por uno, caen bajo la fuerza avasalladora de Odiseo y su astucia táctica. Los gritos de dolor llenan la sala mientras la venganza se hace realidad.
+
+Pantalla 9:
+La furia de Odiseo se desata y, con la ayuda de su hijo Telémaco y dos fieles sirvientes, se abalanza sobre los pretendientes. Uno por uno, caen bajo la fuerza avasalladora de Odiseo y su astucia táctica. Los gritos de dolor llenan la sala mientras la venganza se hace realidad
+
+Si la sirvienta traiciona a Odiseo:
+
+Pantalla 10(final alternativo):
+El murmullo se propaga rápidamente entre los pretendientes, quienes se dan cuenta de que el mendigo es en realidad Odiseo. La tensión aumenta, y algunos pretendientes se ponen nerviosos, mientras otros se enojan. La sirvienta, cediendo a la tentación o al miedo, murmura el nombre de Odiseo en voz baja, revelando su identidad. Odiseo, desprotegido, es atacado por los pretendientes y sufre una dolorosa derrota. El destino de Ítaca se ve alterado drásticamente, y los pretendientes se adueñan del reino, llevando a la desgracia a Odiseo y a su familia.

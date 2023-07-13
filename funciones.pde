@@ -1,6 +1,7 @@
 void historia(int pantallas) {
   image(listaImagenes[pantallas], 0, 0, 600, 600);
   botones(pantallas, listaTextos);
+  generarTextos(pantallas, listaTextos);
 }
 
 void cargarListas(PImage[] imagenes, String[] textos) {
@@ -131,8 +132,58 @@ String cargarTextos(int pos) {
   return texto;
 }
 
-void textosHistoria(int pantallas, String[] textos){
-//en proceso de produccion <3
+void generarTextos(int pantallas, String[] textos) {
+  switch (pantallas) {
+  case 0:
+    push();
+    textSize(50);
+    fill(0);
+    text(textos[0], width/2, 80);
+    pop();
+    break;
+  case 1:
+    push();
+    textSize(35);
+    fill(0);
+    text(textos[3], 130, 140);
+    text(textos[4], 130, 240);
+    text(textos[5], 130, 340);
+    text(textos[7], 440, 140);
+    text(textos[7], 440, 240);
+    text(textos[7], 440, 340);
+    pop();
+    break;
+  case 2:
+  generarTextosHistoria();
+    break;
+  case 3:
+  generarTextosHistoria();
+    break;
+  case 4:
+  generarTextosHistoria();
+    break;
+  case 5:
+  generarTextosHistoria();
+    break;
+  case 6:
+  generarTextosHistoria();
+    break;
+  case 7:
+  generarTextosHistoria();
+    break;
+  case 8:
+  generarTextosHistoria();
+    break;
+  case 9:
+  generarTextosHistoria();
+    break;
+  case 10:
+  generarTextosHistoria();
+    break;
+  case 11:
+  generarTextosHistoria();
+    break;
+  }
 }
 
 
@@ -163,7 +214,7 @@ void botones(int pantallas, String[] textos) {
     generarBoton(posXBotonVolver, posYBotonVolver, tamanioAnchoBotones, tamanioAltoBotones, tamanioTexto, textos[12], colorBotonVolver, colorTextoVolver);
   }
 }
-void generarBoton(int posX, int posY, int ancho, int alto,  int tamTexto, String texto, color colorBoton, color colorTexto) {
+void generarBoton(int posX, int posY, int ancho, int alto, int tamTexto, String texto, color colorBoton, color colorTexto) {
   push();
   fill(colorBoton);
   rect(posX, posY, ancho, alto);
@@ -171,6 +222,17 @@ void generarBoton(int posX, int posY, int ancho, int alto,  int tamTexto, String
   fill(colorTexto);
   text(texto, posX, posY);
   pop();
+}
+
+void generarTextosHistoria( /*int posX,int posY,int tamanio,String textos*/){
+push();
+smooth();
+fill(127,250);
+rect(width/2,50,550,300);
+fill(255);
+/*textSize(tamanio);
+text(textos,posX,posY);*/
+pop();
 }
 
 void botonPresionado() {

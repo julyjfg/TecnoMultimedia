@@ -153,10 +153,10 @@ void setup() {
   posYBotonVolver=height-40;
 
   posXBotonA=(width/2)-200;
-  posYBotonA=200;
+  posYBotonA=300;
 
   posXBotonB=(width/2)+200;
-  posYBotonB=200;
+  posYBotonB=300;
 
   posXBotonReiniciar=width-60;
   posYBotonReiniciar=height-40;
@@ -171,6 +171,7 @@ void draw() {
 
 void mousePressed() {
   botonPresionado();
+  println(mouseX,mouseY);
 }
 
 void mouseMoved() {
