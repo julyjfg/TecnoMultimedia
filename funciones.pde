@@ -99,34 +99,40 @@ String cargarTextos(int pos) {
     texto="Volver";
     break;
   case 13:
-    texto="Historia de pantalla 2";//Sinopsis Hist pantalla 2
+    texto="Odiseo, disfrazado como mendigo, se encuentra en el palacio de Ítaca.\n Observa con atención a los pretendientes que han \n estado abusando de su casa y su esposa. \n El aire está cargado de tensión y secretos.";//Hist pantalla 2
     break;
   case 14:
-    texto="Historia de pantalla 3";//Hist pantalla 3
+    texto="Penélope anuncia que el arco de Odiseo será el premio para\n quien pueda tensarlo y disparar una flecha\n a través de los aros de doce hachas.\n Los pretendientes se alborotan, discutiendo entre ellos \n mientras Odiseo permanece en silencio, vigilante.";//Hist pantalla 3
     break;
   case 15:
-    texto="Historia de pantalla 4";//Hist pantalla 4
+    texto="Odiseo quiere hacer la prueba. Los pretendientes se niegan a permitir \nque Odiseo intente la prueba del arco. Se burlan de él,\n menospreciando su apariencia de mendigo. Ahora elige.";//Hist pantalla 4
     break;
   case 16:
-    texto="Historia de pantalla 5";//Hist pantalla 5
+    texto="La sala se llena de risas y burlas mientras los pretendientes\n se mofan de Odiseo por su audacia. Lo ridiculizan y cuestionan\n su habilidad para manejar el arco y disparar la flecha.\n Odiseo, firme en su determinación,\n mantiene la calma y se prepara para demostrar su valía.";//Hist pantalla 5
     break;
   case 17:
-    texto="Historia de pantalla 6";//Hist pantalla 6
+    texto="Justo cuando Odiseo se acerca al arco, uno de los pretendientes,\n lleno de envidia y desdén, se interpone entre él y el objetivo.\n Penélope, interviniendo como anfitriona,\n exige que Odiseo tenga la oportunidad de probar la prueba,\n recordando su hospitalidad hacia el mendigo desconocido.";//Hist pantalla 6
     break;
   case 18:
-    texto="Historia de pantalla 7";//Hist pantalla 7
+    texto="Es el turno de Odiseo de intentar tensar el arco y disparar la flecha.\n La multitud observa con incredulidad. Todos los ojos\n están puestos en él, pero una sirvienta, en un momento de descuido,\n se encuentra en una encrucijada. Puedes decidir si la sirvienta es fiel a\n Odiseo o si prefiere traicionarlo murmurando su nombre en la cena.";//Hist pantalla 7
     break;
   case 19:
-    texto="Historia de pantalla 9";//Hist pantalla 8
+    texto="Con determinación y habilidad, Odiseo tensa el arco con facilidad y dispara la flecha con precisión /n a través de los aros de doce hachas. El silencio cae sobre la sala mientras todos contemplan el increíble logro de Odiseo. /n Los pretendientes quedan atónitos y se dan cuenta de su error al subestimar al mendigo. /n El destino de Ítaca da un giro repentino.";//Hist pantalla 8
     break;
   case 20:
-    texto="Historia de pantalla 9";//Hist pantalla 9 Final
+    texto="La furia de Odiseo se desata y, con la ayuda de su hijo Telémaco y dos fieles sirvientes, /n se abalanza sobre los pretendientes. Uno por uno, caen bajo la fuerza avasalladora de Odiseo y su astucia táctica. /n Los gritos de dolor llenan la sala mientras la venganza se hace realidad.";//Hist pantalla 9
     break;
   case 21:
-    texto="Historia de pantalla 10";//Hist pantalla 10 Final alternativo
+    texto="Penélope duda de la identidad de Odiseo y pide una prueba más. Odiseo revela un secreto sobre su cama que solo ellos conocen, /n y Penélope finalmente reconoce a su esposo. Ambos se reencuentran con gran alegría y se cuentan sus experiencias durante la separación. /n Odiseo también se reencuentra con su padre Laertes, y la paz y la prosperidad vuelven a Ítaca. ";//Hist pantalla 10 Final
     break;
   case 22:
-    texto="Historia de pantalla 11";//Hist pantalla 11 Final alternativo
+    texto="Odiseo, desconfiando de su propia habilidad, decide no participar en el certamen de Penélope. /n Uno de los pretendientes, con destreza, acierta a pasar la flecha a través de las doce argollas. Los pretendientes celebran victoriosos su éxito. /n El reino de Ítaca cae en manos de los pretendientes y la opresión se extiende. /n Homero, Telemaco y Penélope son asesinados en una cena, mientras Odiseo es capturado y ejecutado. /n La gloriosa ciudad de Ítaca es sometida bajo el dominio de los pretendientes.";//Hist pantalla 11 Final alternativo
+    break;
+  case 23:
+    texto="El murmullo se propaga rápidamente entre los pretendientes, quienes se dan cuenta de que el mendigo es en realidad Odiseo. /n La tensión aumenta, y algunos pretendientes se ponen nerviosos, mientras otros se enojan. /n La sirvienta, cediendo a la tentación o al miedo, murmura el nombre de Odiseo en voz baja, revelando su identidad.";//Hist pantalla 12 Final alternativo
+    break;
+  case 24:
+    texto="Odiseo, desprotegido, es atacado por los pretendientes y sufre una dolorosa derrota. El destino de Ítaca se ve alterado drásticamente, /n y los pretendientes se adueñan del reino, llevando a la desgracia a Odiseo y a su familia.";//Hist pantalla 12 Final alternativo 2
     break;
   }
   return texto;
@@ -154,34 +160,34 @@ void generarTextos(int pantallas, String[] textos) {
     pop();
     break;
   case 2:
-  generarTextosHistoria();
+    generarTextosHistoria(textos[13]);
     break;
   case 3:
-  generarTextosHistoria();
+    generarTextosHistoria(textos[14]);
     break;
   case 4:
-  generarTextosHistoria();
+    generarTextosHistoria(textos[15]);
     break;
   case 5:
-  generarTextosHistoria();
+    generarTextosHistoria(textos[16]);
     break;
   case 6:
-  generarTextosHistoria();
+    generarTextosHistoria(textos[17]);
     break;
   case 7:
-  generarTextosHistoria();
+    generarTextosHistoria(textos[18]);
     break;
   case 8:
-  generarTextosHistoria();
+    generarTextosHistoria(textos[13]);
     break;
   case 9:
-  generarTextosHistoria();
+    generarTextosHistoria(textos[13]);
     break;
   case 10:
-  generarTextosHistoria();
+    generarTextosHistoria(textos[13]);
     break;
   case 11:
-  generarTextosHistoria();
+    generarTextosHistoria(textos[13]);
     break;
   }
 }
@@ -224,15 +230,15 @@ void generarBoton(int posX, int posY, int ancho, int alto, int tamTexto, String 
   pop();
 }
 
-void generarTextosHistoria( /*int posX,int posY,int tamanio,String textos*/){
-push();
-smooth();
-fill(127,250);
-rect(width/2,50,550,300);
-fill(255);
-/*textSize(tamanio);
-text(textos,posX,posY);*/
-pop();
+void generarTextosHistoria( String textos) {
+  push();
+  smooth();
+  fill(127, 250);
+  rect(width/2, 120, 590, 200);
+  fill(255);
+  textSize(20);
+  text(textos, width/2, 50);
+  pop();
 }
 
 void botonPresionado() {

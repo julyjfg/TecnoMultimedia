@@ -3,7 +3,7 @@ PImage [] listaImagenes = new PImage[12];
 
 int pantallas;
 
-String [] listaTextos = new String[22];
+String [] listaTextos = new String[25];
 
 boolean okIniciar;
 boolean okCreditos;
