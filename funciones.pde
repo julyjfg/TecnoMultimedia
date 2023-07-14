@@ -5,10 +5,10 @@ void historia(int pantallas) {
 }
 
 void cargarListas(PImage[] imagenes, String[] textos) {
-  for (int i=0; i<=11; i++) {
+  for (int i=0; i<=12; i++) {
     imagenes[i]=cargarImagen(i);
   }
-  for (int j=0; j<=21; j++) {
+  for (int j=0; j<=25; j++) {
     textos[j]=cargarTextos(j);
   }
 }
@@ -51,6 +51,9 @@ PImage cargarImagen(int pos) {
     break;
   case 11:
     imagen=loadImage("imagen11.jpg");
+    break;
+  case 12:
+    imagen=loadImage("imagen12.jpg");
     break;
   }
   return imagen;
@@ -108,31 +111,34 @@ String cargarTextos(int pos) {
     texto="Odiseo quiere hacer la prueba. Los pretendientes se niegan a permitir \nque Odiseo intente la prueba del arco. Se burlan de él,\n menospreciando su apariencia de mendigo. Ahora elige.";//Hist pantalla 4
     break;
   case 16:
-    texto="La sala se llena de risas y burlas mientras los pretendientes\n se mofan de Odiseo por su audacia. Lo ridiculizan y cuestionan\n su habilidad para manejar el arco y disparar la flecha.\n Odiseo, firme en su determinación,\n mantiene la calma y se prepara para demostrar su valía.";//Hist pantalla 5
+    texto="La sala se llena de risas y burlas mientras los pretendientes\nse mofan de Odiseo por su audacia. Lo ridiculizan y cuestionan\n su habilidad para manejar el arco y disparar la flecha.\n Odiseo, firme en su determinación,\n mantiene la calma y se prepara para demostrar su valía.";//Hist pantalla 5
     break;
   case 17:
-    texto="Justo cuando Odiseo se acerca al arco, uno de los pretendientes,\n lleno de envidia y desdén, se interpone entre él y el objetivo.\n Penélope, interviniendo como anfitriona,\n exige que Odiseo tenga la oportunidad de probar la prueba,\n recordando su hospitalidad hacia el mendigo desconocido.";//Hist pantalla 6
+    texto="Justo cuando Odiseo se acerca al arco, uno de los pretendientes,\nlleno de envidia y desdén, se interpone entre él y el objetivo.\n Penélope, interviniendo como anfitriona,\n exige que Odiseo tenga la oportunidad de probar la prueba,\n recordando su hospitalidad hacia el mendigo desconocido.";//Hist pantalla 6
     break;
   case 18:
-    texto="Es el turno de Odiseo de intentar tensar el arco y disparar la flecha.\n La multitud observa con incredulidad. Todos los ojos\n están puestos en él, pero una sirvienta, en un momento de descuido,\n se encuentra en una encrucijada. Puedes decidir si la sirvienta es fiel a\n Odiseo o si prefiere traicionarlo murmurando su nombre en la cena.";//Hist pantalla 7
+    texto="Es el turno de Odiseo de intentar tensar el arco y disparar la flecha.\nLa multitud observa con incredulidad. Todos los ojos\n están puestos en él, pero una sirvienta, en un momento de descuido,\n se encuentra en una encrucijada. Puedes decidir si la sirvienta es fiel a\n Odiseo o si prefiere traicionarlo murmurando su nombre en la cena.";//Hist pantalla 7
     break;
   case 19:
-    texto="Con determinación y habilidad, Odiseo tensa el arco con facilidad y dispara la flecha con precisión /n a través de los aros de doce hachas. El silencio cae sobre la sala mientras todos contemplan el increíble logro de Odiseo. /n Los pretendientes quedan atónitos y se dan cuenta de su error al subestimar al mendigo. /n El destino de Ítaca da un giro repentino.";//Hist pantalla 8
+    texto="Con determinación y habilidad, Odiseo tensa el arco con facilidad y\ndispara la flecha con precisión a través de los aros de doce hachas.\n El silencio cae sobre la sala mientras todos contemplan el\n increíble logro de Odiseo. Los pretendientes quedan atónitos y se\n dan cuenta de su error al subestimar al mendigo. El destino de Ítaca\n da un giro repentino.";//Hist pantalla 8
     break;
   case 20:
-    texto="La furia de Odiseo se desata y, con la ayuda de su hijo Telémaco y dos fieles sirvientes, /n se abalanza sobre los pretendientes. Uno por uno, caen bajo la fuerza avasalladora de Odiseo y su astucia táctica. /n Los gritos de dolor llenan la sala mientras la venganza se hace realidad.";//Hist pantalla 9
+    texto="La furia de Odiseo se desata y, con la ayuda de su hijo\nTelémaco y dos fieles sirvientes, se abalanza sobre los pretendientes.\n Uno por uno, caen bajo la fuerza avasalladora de Odiseo\n y su astucia táctica. Los gritos de dolor llenan la sala mientras\n la venganza se hace realidad.";//Hist pantalla 9
     break;
   case 21:
-    texto="Penélope duda de la identidad de Odiseo y pide una prueba más. Odiseo revela un secreto sobre su cama que solo ellos conocen, /n y Penélope finalmente reconoce a su esposo. Ambos se reencuentran con gran alegría y se cuentan sus experiencias durante la separación. /n Odiseo también se reencuentra con su padre Laertes, y la paz y la prosperidad vuelven a Ítaca. ";//Hist pantalla 10 Final
+    texto="Penélope duda de la identidad de Odiseo y pide una prueba más.\nOdiseo revela un secreto sobre su cama que solo ellos conocen,\nPenélope finalmente reconoce a su esposo. Ambos se reencuentran\ncon gran alegría y se cuentan sus experiencias durante la separación.\nOdiseo también se reencuentra con su padre Laertes.\nLa paz y la prosperidad vuelven a Ítaca. ";//Hist pantalla 10 Final
     break;
   case 22:
-    texto="Odiseo, desconfiando de su propia habilidad, decide no participar en el certamen de Penélope. /n Uno de los pretendientes, con destreza, acierta a pasar la flecha a través de las doce argollas. Los pretendientes celebran victoriosos su éxito. /n El reino de Ítaca cae en manos de los pretendientes y la opresión se extiende. /n Homero, Telemaco y Penélope son asesinados en una cena, mientras Odiseo es capturado y ejecutado. /n La gloriosa ciudad de Ítaca es sometida bajo el dominio de los pretendientes.";//Hist pantalla 11 Final alternativo
+    texto="Odiseo, desconfiando de su propia habilidad, decide no\nparticipar en el certamen de Penélope. Uno de los pretendientes,\n con destreza, acierta a pasar la flecha a través de las doce argollas.\n Los pretendientes celebran victoriosos su éxito. El reino de Ítaca\n cae en manos de los pretendientes y la opresión se extiende.";//Hist pantalla 11 Final alternativo
     break;
   case 23:
-    texto="El murmullo se propaga rápidamente entre los pretendientes, quienes se dan cuenta de que el mendigo es en realidad Odiseo. /n La tensión aumenta, y algunos pretendientes se ponen nerviosos, mientras otros se enojan. /n La sirvienta, cediendo a la tentación o al miedo, murmura el nombre de Odiseo en voz baja, revelando su identidad.";//Hist pantalla 12 Final alternativo
+    texto="Telemaco y Penélope son asesinados en una cena, mientras\nOdiseo es capturado y ejecutado. La gloriosa ciudad de Ítaca\nes sometida bajo el dominio de los pretendientes.";//Hist pantalla 11 Final alternativo
     break;
   case 24:
-    texto="Odiseo, desprotegido, es atacado por los pretendientes y sufre una dolorosa derrota. El destino de Ítaca se ve alterado drásticamente, /n y los pretendientes se adueñan del reino, llevando a la desgracia a Odiseo y a su familia.";//Hist pantalla 12 Final alternativo 2
+    texto="El murmullo se propaga rápidamente entre los pretendientes,\nquienes se dan cuenta de que el mendigo es en realidad Odiseo.\nLa tensión aumenta, y algunos pretendientes se ponen nerviosos,\nmientras otros se enojan. La sirvienta, cediendo a la tentación\no al miedo, murmura el nombre de Odiseo en voz baja,\nrevelando su identidad.";//Hist pantalla 12 Final alternativo
+    break;
+  case 25:
+    texto="Odiseo, desprotegido, es atacado por los pretendientes y sufre\nuna dolorosa derrota. El destino de Ítaca se ve alterado\ndrásticamente, y los pretendientes se adueñan del reino,\nllevando a la desgracia a Odiseo y a su familia.";//Hist pantalla 12 Final alternativo 2
     break;
   }
   return texto;
@@ -178,16 +184,27 @@ void generarTextos(int pantallas, String[] textos) {
     generarTextosHistoria(textos[18]);
     break;
   case 8:
-    generarTextosHistoria(textos[13]);
+    generarTextosHistoria(textos[19]);
     break;
   case 9:
-    generarTextosHistoria(textos[13]);
+    generarTextosHistoria(textos[20]);
     break;
   case 10:
-    generarTextosHistoria(textos[13]);
+    generarTextosHistoria(textos[21]);
     break;
   case 11:
-    generarTextosHistoria(textos[13]);
+    if (botonSiguienteTexto==false) {
+      generarTextosHistoria(textos[22]);
+    } else {
+      generarTextosHistoria(textos[23]);
+    }
+    break;
+  case 12:
+    if (botonSiguienteTexto==false) {
+      generarTextosHistoria(textos[24]);
+    } else {
+      generarTextosHistoria(textos[25]);
+    }
     break;
   }
 }
@@ -202,22 +219,23 @@ void botones(int pantallas, String[] textos) {
   if (pantallas==1) {
     generarBoton(posXBotonInicioDeCreditos, posYBotonInicioDeCreditos, tamanioAnchoBotones, tamanioAltoBotones, tamanioTexto, textos[3], colorBotonInicioDeCreditos, colorTextoInicioDeCreditos);
   }
-  if ((pantallas==2)||(pantallas==3)||(pantallas==5)||(pantallas==6)||(pantallas==7)) {
+  if ((pantallas==2)||(pantallas==3)||(pantallas==5)||(pantallas==6)||(pantallas==8)||(pantallas==9)) {
 
     generarBoton(posXBotonSiguiente, posYBotonSiguiente, tamanioAnchoBotones, tamanioAltoBotones, tamanioTexto, textos[8], colorBotonSiguiente, colorTextoSiguiente);
   }
-  if ((pantallas==4)||(pantallas==8)) {
+  if ((pantallas==4)||(pantallas==7)) {
 
     generarBoton(posXBotonA, posYBotonA, tamanioAnchoBotonesAYB, tamanioAltoBotonesAYB, tamanioTexto, textos[9], colorBotonA, colorTextoA);
     generarBoton(posXBotonB, posYBotonB, tamanioAnchoBotonesAYB, tamanioAltoBotonesAYB, tamanioTexto, textos[10], colorBotonB, colorTextoB);
   }
-  if (pantallas==9) {
+  if (pantallas==10) {
 
     generarBoton(posXBotonInicioFinal, posYBotonInicioFinal, tamanioAnchoBotones, tamanioAltoBotones, tamanioTexto, textos[3], colorBotonInicioFinal, colorTextoInicioFinal);
   }
-  if ((pantallas==10)||(pantallas==11)) {
+  if ((pantallas==11)||(pantallas==12)) {
     generarBoton(posXBotonReiniciar, posYBotonReiniciar, tamanioAnchoBotones, tamanioAltoBotones, tamanioTexto, textos[11], colorBotonReiniciar, colorTextoReiniciar);
     generarBoton(posXBotonVolver, posYBotonVolver, tamanioAnchoBotones, tamanioAltoBotones, tamanioTexto, textos[12], colorBotonVolver, colorTextoVolver);
+    generarBotonTextoSiguiente( posXBotonTextoSiguiente, posYBotonTextoSiguiente, radioBotonTextoSiguiente, colorBotonTextoSiguiente, colorTextoTextoSiguiente);
   }
 }
 void generarBoton(int posX, int posY, int ancho, int alto, int tamTexto, String texto, color colorBoton, color colorTexto) {
@@ -229,7 +247,15 @@ void generarBoton(int posX, int posY, int ancho, int alto, int tamTexto, String 
   text(texto, posX, posY);
   pop();
 }
-
+void generarBotonTextoSiguiente(int posX, int posY, int radio, color colorBoton, color colorTexto) {
+  push();
+  fill(colorBoton);
+  ellipse(posX, posY, radio, radio);
+  textSize(20);
+  fill(colorTexto);
+  text(">", posX, posY+5);
+  pop();
+}
 void generarTextosHistoria( String textos) {
   push();
   smooth();
@@ -255,7 +281,7 @@ void botonPresionado() {
       colorTextoCreditos=color(0);
     }
   }
-  if ((pantallas==1)||(pantallas==9)) {
+  if ((pantallas==1)||(pantallas==10)) {
     if ((okInicio)) {
       pantallas=0;
       okInicio=false;
@@ -265,7 +291,7 @@ void botonPresionado() {
       colorTextoInicioFinal=color(0);
     }
   }
-  if ((pantallas==2)||(pantallas==3)||(pantallas==5)||(pantallas==6)||(pantallas==7)) {
+  if ((pantallas==2)||(pantallas==3)||(pantallas==5)||(pantallas==6)||(pantallas==8)||(pantallas==9)) {
     if (okSiguiente) {
       pantallas++;
       okSiguiente=false;
@@ -285,39 +311,53 @@ void botonPresionado() {
       colorBotonB=color(255);
       colorTextoB=color(0);
     }
-  } else if (pantallas==8) {
+  } else if (pantallas==7) {
     if (okA) {
-      pantallas=10;
+      pantallas++;
       okA=false;
       colorBotonA=color(255);
       colorTextoA=color(0);
     } else if (okB) {
-      pantallas++;
+      pantallas=12;
       okB=false;
       colorBotonB=color(255);
       colorTextoB=color(0);
     }
   }
-  if (pantallas==10) {
-    if (okReiniciar) {
-      pantallas=0;
-      okReiniciar=false;
-      colorBotonReiniciar=color(255);
-      colorTextoReiniciar=color(0);
-    } else if (okVolver) {
-      pantallas=8;
-      okVolver=false;
-      colorBotonVolver=color(255);
-      colorTextoVolver=color(0);
+  if (pantallas==11) {
+    if (okBotonSiguienteTexto) {
+      botonSiguienteTexto=true;
     }
-  } else if (pantallas==11) {
     if (okReiniciar) {
       pantallas=0;
       okReiniciar=false;
+      botonSiguienteTexto=false;
+      okBotonSiguienteTexto=false;
       colorBotonReiniciar=color(255);
       colorTextoReiniciar=color(0);
     } else if (okVolver) {
       pantallas=4;
+      okVolver=false;
+      botonSiguienteTexto=false;
+      okBotonSiguienteTexto=false;
+      colorBotonVolver=color(255);
+      colorTextoVolver=color(0);
+    }
+  } else if (pantallas==12) {
+    if (okBotonSiguienteTexto) {
+      botonSiguienteTexto=true;
+    }
+    if (okReiniciar) {
+      pantallas=0;
+      okReiniciar=false;
+      botonSiguienteTexto=false;
+      okBotonSiguienteTexto=false;
+      colorBotonReiniciar=color(255);
+      colorTextoReiniciar=color(0);
+    } else if (okVolver) {
+      pantallas=7;
+      botonSiguienteTexto=false;
+      okBotonSiguienteTexto=false;
       okVolver=false;
       colorBotonVolver=color(255);
       colorTextoVolver=color(0);
@@ -355,7 +395,7 @@ void cabioColorYTexto() {
       colorTextoInicioDeCreditos=color(0);
       okInicio=false;
     }
-  } else if (pantallas==9) {
+  } else if (pantallas==10) {
     if ((mouseX>posXBotonInicioFinal-tamanioAnchoBotones/2)&&(mouseX<+posXBotonInicioFinal+tamanioAnchoBotones/2)&&(mouseY>posYBotonInicioFinal-tamanioAltoBotones/2)&&(mouseY<posYBotonInicioFinal+tamanioAltoBotones/2)) {
       colorBotonInicioFinal=color(245, 142, 22);
       colorTextoInicioFinal=color(116, 118, 83);
@@ -366,7 +406,7 @@ void cabioColorYTexto() {
       okInicio=false;
     }
   }
-  if ((pantallas==2)||(pantallas==3)||(pantallas==5)||(pantallas==6)||(pantallas==7)) {
+  if ((pantallas==2)||(pantallas==3)||(pantallas==5)||(pantallas==6)||(pantallas==8)||(pantallas==9)) {
     if ((mouseX>posXBotonSiguiente-tamanioAnchoBotones/2)&&(mouseX<+posXBotonSiguiente+tamanioAnchoBotones/2)&&(mouseY>posYBotonSiguiente-tamanioAltoBotones/2)&&(mouseY<posYBotonSiguiente+tamanioAltoBotones/2)) {
       colorBotonSiguiente=color(0, 197, 255);
       colorTextoSiguiente=color(137, 43, 49);
@@ -396,7 +436,7 @@ void cabioColorYTexto() {
       colorTextoB=color(0);
       okB=false;
     }
-  } else if (pantallas==8) {
+  } else if (pantallas==7) {
     if ((mouseX>posXBotonA-tamanioAnchoBotonesAYB/2)&&(mouseX<+posXBotonA+tamanioAnchoBotonesAYB/2)&&(mouseY>posYBotonA-tamanioAltoBotonesAYB/2)&&(mouseY<posYBotonA+tamanioAltoBotonesAYB/2)) {
       colorBotonA=color(43, 41, 152);
       colorTextoA=color(255);
@@ -416,7 +456,7 @@ void cabioColorYTexto() {
       okB=false;
     }
   }
-  if (pantallas==10) {
+  if (pantallas==11) {
     if ((mouseX>posXBotonVolver-tamanioAnchoBotones/2)&&(mouseX<+posXBotonVolver+tamanioAnchoBotones/2)&&(mouseY>posYBotonVolver-tamanioAltoBotones/2)&&(mouseY<posYBotonVolver+tamanioAltoBotones/2)) {
       colorBotonVolver=color(93, 255, 246);
       colorTextoVolver=color(115, 131, 130);
@@ -435,7 +475,16 @@ void cabioColorYTexto() {
       colorTextoReiniciar=color(0);
       okReiniciar=false;
     }
-  } else if (pantallas==11) {
+    if (dist(mouseX, mouseY, posXBotonTextoSiguiente, posYBotonTextoSiguiente)<radioBotonTextoSiguiente) {
+      colorBotonTextoSiguiente=color(0, 255, 121);
+      colorTextoTextoSiguiente=color(93, 170, 129);
+      okBotonSiguienteTexto=true;
+    } else {
+      colorBotonTextoSiguiente=color(255);
+      colorTextoTextoSiguiente=color(0);
+      okBotonSiguienteTexto=false;
+    }
+  } else if (pantallas==12) {
     if ((mouseX>posXBotonVolver-tamanioAnchoBotones/2)&&(mouseX<+posXBotonVolver+tamanioAnchoBotones/2)&&(mouseY>posYBotonVolver-tamanioAltoBotones/2)&&(mouseY<posYBotonVolver+tamanioAltoBotones/2)) {
       colorBotonVolver=color(93, 255, 246);
       colorTextoVolver=color(115, 131, 130);
@@ -452,7 +501,16 @@ void cabioColorYTexto() {
     } else {
       colorBotonReiniciar=color(255);
       colorTextoReiniciar=color(0);
-      okReiniciar=false;
+      okBotonSiguienteTexto=false;
+    }
+    if (dist(mouseX, mouseY, posXBotonTextoSiguiente, posYBotonTextoSiguiente)<radioBotonTextoSiguiente) {
+      colorBotonTextoSiguiente=color(0, 255, 121);
+      colorTextoTextoSiguiente=color(93, 170, 129);
+      okBotonSiguienteTexto=true;
+    } else {
+      colorBotonTextoSiguiente=color(255);
+      colorTextoTextoSiguiente=color(0);
+      okBotonSiguienteTexto=false;
     }
   }
 }

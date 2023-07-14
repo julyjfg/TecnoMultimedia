@@ -1,9 +1,9 @@
 //variables globales
-PImage [] listaImagenes = new PImage[12];
+PImage [] listaImagenes = new PImage[13];
 
 int pantallas;
 
-String [] listaTextos = new String[25];
+String [] listaTextos = new String[26];
 
 boolean okIniciar;
 boolean okCreditos;
@@ -13,6 +13,8 @@ boolean okA;
 boolean okB;
 boolean okVolver;
 boolean okReiniciar;
+boolean okBotonSiguienteTexto;
+boolean botonSiguienteTexto;
 
 int tamanioAnchoBotones;
 int tamanioAltoBotones;
@@ -68,6 +70,13 @@ color colorTextoB;
 int tamanioAnchoBotonesAYB;
 int tamanioAltoBotonesAYB;
 
+int posXBotonTextoSiguiente;
+int posYBotonTextoSiguiente;
+int radioBotonTextoSiguiente;
+
+color colorBotonTextoSiguiente;
+color colorTextoTextoSiguiente;
+
 
 int tamanioTexto;
 
@@ -94,6 +103,7 @@ void setup() {
   size(600, 600);
   background(0);
   rectMode(CENTER);
+  ellipseMode(CENTER);
   textAlign(CENTER);
 
   cargarListas(listaImagenes, listaTextos);
@@ -125,9 +135,14 @@ void setup() {
 
   colorBotonA=255;
   colorTextoA=0;
-  
+
   colorBotonB=255;
   colorTextoB=0;
+
+  colorBotonTextoSiguiente=255;
+  colorTextoTextoSiguiente=0;
+  
+  radioBotonTextoSiguiente=20;
 
   tamanioAnchoBotones=100;
   tamanioAltoBotones=50;
@@ -135,6 +150,10 @@ void setup() {
 
   tamanioAnchoBotonesAYB=30;
   tamanioAltoBotonesAYB=40;
+
+
+posXBotonTextoSiguiente=565;
+posYBotonTextoSiguiente=250;
 
 
   posXBotonIniciar=width/2;
@@ -171,7 +190,7 @@ void draw() {
 
 void mousePressed() {
   botonPresionado();
-  println(mouseX,mouseY);
+  println(mouseX, mouseY);
 }
 
 void mouseMoved() {
