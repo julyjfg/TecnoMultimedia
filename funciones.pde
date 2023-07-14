@@ -17,43 +17,43 @@ PImage cargarImagen(int pos) {
   PImage imagen=null;
   switch (pos) {
   case 0:
-    imagen=loadImage("imagen0.jpg");
+    imagen=loadImage("imagen0.png");
     break;
   case 1:
-    imagen=loadImage("imagen1.jpg");
+    imagen=loadImage("imagen1.png");
     break;
   case 2:
-    imagen=loadImage("imagen2.jpg");
+    imagen=loadImage("imagen2.png");
     break;
   case 3:
-    imagen=loadImage("imagen3.jpg");
+    imagen=loadImage("imagen3.png");
     break;
   case 4:
-    imagen=loadImage("imagen4.jpg");
+    imagen=loadImage("imagen4.png");
     break;
   case 5:
-    imagen=loadImage("imagen5.jpg");
+    imagen=loadImage("imagen5.png");
     break;
   case 6:
-    imagen=loadImage("imagen6.jpg");
+    imagen=loadImage("imagen6.png");
     break;
   case 7:
-    imagen=loadImage("imagen7.jpg");
+    imagen=loadImage("imagen7.png");
     break;
   case 8:
-    imagen=loadImage("imagen8.jpg");
+    imagen=loadImage("imagen8.png");
     break;
   case 9:
-    imagen=loadImage("imagen9.jpg");
+    imagen=loadImage("imagen9.png");
     break;
   case 10:
-    imagen=loadImage("imagen10.jpg");
+    imagen=loadImage("imagen10.png");
     break;
   case 11:
-    imagen=loadImage("imagen11.jpg");
+    imagen=loadImage("imagen11.png");
     break;
   case 12:
-    imagen=loadImage("imagen12.jpg");
+    imagen=loadImage("imagen12.png");
     break;
   }
   return imagen;
@@ -108,7 +108,7 @@ String cargarTextos(int pos) {
     texto="Penélope anuncia que el arco de Odiseo será el premio para\n quien pueda tensarlo y disparar una flecha\n a través de los aros de doce hachas.\n Los pretendientes se alborotan, discutiendo entre ellos \n mientras Odiseo permanece en silencio, vigilante.";//Hist pantalla 3
     break;
   case 15:
-    texto="Odiseo quiere hacer la prueba. Los pretendientes se niegan a permitir \nque Odiseo intente la prueba del arco. Se burlan de él,\n menospreciando su apariencia de mendigo. Ahora elige.";//Hist pantalla 4
+    texto="Odiseo quiere hacer la prueba. Los pretendientes se niegan a permitir \nque Odiseo intente la prueba del arco. Se burlan de él,\n menospreciando su apariencia de mendigo. Ahora elige.\nA)Dudar de sus habilidades\nB)Hacer la prueba";//Hist pantalla 4
     break;
   case 16:
     texto="La sala se llena de risas y burlas mientras los pretendientes\nse mofan de Odiseo por su audacia. Lo ridiculizan y cuestionan\n su habilidad para manejar el arco y disparar la flecha.\n Odiseo, firme en su determinación,\n mantiene la calma y se prepara para demostrar su valía.";//Hist pantalla 5
@@ -117,7 +117,7 @@ String cargarTextos(int pos) {
     texto="Justo cuando Odiseo se acerca al arco, uno de los pretendientes,\nlleno de envidia y desdén, se interpone entre él y el objetivo.\n Penélope, interviniendo como anfitriona,\n exige que Odiseo tenga la oportunidad de probar la prueba,\n recordando su hospitalidad hacia el mendigo desconocido.";//Hist pantalla 6
     break;
   case 18:
-    texto="Es el turno de Odiseo de intentar tensar el arco y disparar la flecha.\nLa multitud observa con incredulidad. Todos los ojos\n están puestos en él, pero una sirvienta, en un momento de descuido,\n se encuentra en una encrucijada. Puedes decidir si la sirvienta es fiel a\n Odiseo o si prefiere traicionarlo murmurando su nombre en la cena.";//Hist pantalla 7
+    texto="Es el turno de Odiseo de intentar tensar el arco y disparar la flecha.\nLa multitud observa con incredulidad. Todos los ojos\n están puestos en él, pero una sirvienta, en un momento de descuido,\n se encuentra en una encrucijada. Puedes decidir si:\nA)La sirvienta es fiel a Odiseo.\nB)Traicionarlo murmurando su nombre en la cena.";//Hist pantalla 7
     break;
   case 19:
     texto="Con determinación y habilidad, Odiseo tensa el arco con facilidad y\ndispara la flecha con precisión a través de los aros de doce hachas.\n El silencio cae sobre la sala mientras todos contemplan el\n increíble logro de Odiseo. Los pretendientes quedan atónitos y se\n dan cuenta de su error al subestimar al mendigo. El destino de Ítaca\n da un giro repentino.";//Hist pantalla 8
@@ -149,14 +149,14 @@ void generarTextos(int pantallas, String[] textos) {
   case 0:
     push();
     textSize(50);
-    fill(0);
+    fill(137,44,44);
     text(textos[0], width/2, 80);
     pop();
     break;
   case 1:
     push();
     textSize(35);
-    fill(0);
+    fill(133,16,16);
     text(textos[3], 130, 140);
     text(textos[4], 130, 240);
     text(textos[5], 130, 340);
@@ -258,8 +258,8 @@ void generarBotonTextoSiguiente(int posX, int posY, int radio, color colorBoton,
 }
 void generarTextosHistoria( String textos) {
   push();
-  smooth();
-  fill(127, 250);
+  noStroke();
+  fill(127, 150);
   rect(width/2, 120, 590, 200);
   fill(255);
   textSize(20);
