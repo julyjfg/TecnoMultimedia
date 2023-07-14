@@ -1,100 +1,95 @@
+/*
+Julian Ferrari Goñi
+Comision 5
+https://youtu.be/ManL_eoE394
+*/
+
+
+
+
 //variables globales
 PImage [] listaImagenes = new PImage[13];
-
-int pantallas;
-
+                                            //variables de arreglo imagenes y texto.
 String [] listaTextos = new String[26];
+
+int pantallas;                              //variable de estado.
 
 boolean okIniciar;
 boolean okCreditos;
 boolean okSiguiente;
 boolean okInicio;
-boolean okA;
+boolean okA;                                //variables booleanes de los botones.
 boolean okB;
 boolean okVolver;
 boolean okReiniciar;
 boolean okBotonSiguienteTexto;
 boolean botonSiguienteTexto;
 
+
 int tamanioAnchoBotones;
-int tamanioAltoBotones;
+int tamanioAltoBotones;                    //variables de tamaño.
+int tamanioAnchoBotonesAYB;
+int tamanioAltoBotonesAYB;
+int radioBotonTextoSiguiente;
+int tamanioTexto;
+
 
 int posXBotonIniciar;
 int posYBotonIniciar;
-color colorBotonIniciar;
-color colorTextoIniciar;
-
 int posXBotonCreditos;
 int posYBotonCreditos;
-color colorBotonCreditos;
-color colorTextoCreditos;
-
 int posXBotonSiguiente;
 int posYBotonSiguiente;
-color colorBotonSiguiente;
-color colorTextoSiguiente;
-
-
 int posXBotonVolver;
-int posYBotonVolver;
-color colorBotonVolver;
-color colorTextoVolver;
-
+int posYBotonVolver;                        //variables de posicion.
 int posXBotonReiniciar;
 int posYBotonReiniciar;
-color colorBotonReiniciar;
-color colorTextoReiniciar;
-
 int posXBotonInicioDeCreditos;
 int posYBotonInicioDeCreditos;
-color colorBotonInicioDeCreditos;
-color colorTextoInicioDeCreditos;
-
 int posXBotonInicioFinal;
 int posYBotonInicioFinal;
-color colorBotonInicioFinal;
-color colorTextoInicioFinal;
-
 int posXBotonA;
 int posYBotonA;
-color colorBotonA;
-color colorTextoA;
-
-
 int posXBotonB;
 int posYBotonB;
-color colorBotonB;
-color colorTextoB;
-
-
-int tamanioAnchoBotonesAYB;
-int tamanioAltoBotonesAYB;
-
 int posXBotonTextoSiguiente;
 int posYBotonTextoSiguiente;
-int radioBotonTextoSiguiente;
 
+
+color colorBotonIniciar;
+color colorTextoIniciar;
+color colorBotonCreditos;
+color colorTextoCreditos;
+color colorBotonSiguiente;
+color colorTextoSiguiente;
+color colorBotonVolver;
+color colorTextoVolver;                     //variables de colores.
+color colorBotonReiniciar;
+color colorTextoReiniciar;
+color colorBotonInicioDeCreditos;
+color colorTextoInicioDeCreditos;
+color colorBotonInicioFinal;
+color colorTextoInicioFinal;
+color colorBotonA;
+color colorTextoA;
+color colorBotonB;
+color colorTextoB;
 color colorBotonTextoSiguiente;
 color colorTextoTextoSiguiente;
 
 
-int tamanioTexto;
+
 
 int posXDirector;
 int posYDirector;
-
 int posXArtista;
 int posYArtista;
-
-int posXProgramador;
+int posXProgramador;                        //variables de posicionamiento del texto.
 int posYProgramador;
-
 int posXCreditos;
 int posYCreditos;
-
 int posXTitulo;
 int posYTitulo;
-
 int posXDelTextoHistoria;
 int posYDelTextoHistoria;
 
@@ -190,7 +185,7 @@ void draw() {
 
 void mousePressed() {
   botonPresionado();
-  println(mouseX, mouseY);
+  
 }
 
 void mouseMoved() {
