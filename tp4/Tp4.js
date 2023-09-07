@@ -1,25 +1,24 @@
 let pantallas
-let okTiempo, okVidas, okArriba, okAbajo, okIzquierda, okDerecha,okDisparo
-let posXDelJugador, posYDelJugador, posXDatos, posYDatos
+let okTiempo, okVidas, okArriba, okAbajo, okIzquierda, okDerecha,okDisparo, okGano
+let posXDelJugador, posYDelJugador,posXDelDisparo, posYDelDisparo, posXDatos, posYDatos,posXBoton
 let w, h
-let tamanio
+let tamanio,ancho, alto
 let vidas = []
 let balasX= []
-  function setup() {
+let tiempoEnPantalla
+let segundos 
+let minutos
+let intervalo
+let colorBoton,colorTexto
+
+function setup() {
     
-    w=window.innerWidth
-    h=window.innerHeight
-    
-    pantallas=1
-    tamanio=100
-    posXDelJugador=100
-    posYDelJugador=400
-    
-    okTiempo=false
-    okVidas=false
+   preload()
     
     textSize(100)
     textAlign(CENTER)
+    rectMode(CENTER)
+    ellipseMode(CENTER)
     
     for(let i=0; i<balasX.length;i++){
       balasX[i]= windowWidth
@@ -29,10 +28,37 @@ let balasX= []
 }
 
 function draw() {
-
   programa()
 }
 
+function preload() {
+    pantallas=1
+    
+    w=window.innerWidth
+    h=window.innerHeight
+
+    tamanio=100
+    ancho=100
+    alto=50
+
+    posXDelJugador=100
+    posYDelJugador=500
+    posXDelDisparo=posXDelJugador+50
+    posYDelDisparo=500
+    
+
+    colorBoton=255
+    colorTexto=0
+
+    okVidas=false
+    okTiempo=false
+    okGano=false
+
+    minutos=2
+    intervalo=60
+    segundos=0
+    tiempoEnPantalla="3:00"
+}
 function mousePressed() {
   pantallas++
     print(mouseX, mouseY)
@@ -54,7 +80,12 @@ function keyPressed() {
     okAbajo=true
   }
   if(key==" "){
+    print("FUEGO!!!")
   okDisparo=true
+  }
+  if((key=="r")||(key=="R")){
+  pantallas=2
+  preload()
   }
 }
 function keyReleased() {
@@ -71,6 +102,7 @@ function keyReleased() {
     okAbajo=false
   }
   if(key==" "){
+    print("ALTO EL FUEGO!!")
   okDisparo=false
   }
 }
