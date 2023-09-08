@@ -1,39 +1,56 @@
 let pantallas
-let okTiempo, okVidas, okArriba, okAbajo, okIzquierda, okDerecha,okDisparo, okGano
-let posXDelJugador, posYDelJugador,posXDelDisparo, posYDelDisparo, posXDatos, posYDatos,posXBoton
+
+let fondo =[]
+let botonInicio
+let botonCreditos
+
+let okTiempo 
+let okVidas
+let okArriba
+let okAbajo
+let okIzquierda
+let okDerecha
+let okGano
+let disparar 
+let recarga = true
+let enemigosActivos
+
+let posXDelJugador
+let posYDelJugador
+let posXDelDisparo
+let posYDelDisparo
+
+let velocidadFondo
+let posXDelFondo
+
+let posXDatos
+let posYDatos
+
 let w, h
 let tamanio,ancho, alto
+
 let vidas = []
-let balasX= []
+let enemigos= []
+
 let tiempoEnPantalla
 let segundos 
 let minutos
 let intervalo
+
 let colorBoton,colorTexto
 
-function setup() {
-    
-   preload()
-    
-    textSize(100)
-    textAlign(CENTER)
-    rectMode(CENTER)
-    ellipseMode(CENTER)
-    
-    for(let i=0; i<balasX.length;i++){
-      balasX[i]= windowWidth
-    }
-    
-    createCanvas(w, h)
+ 
+let cuenta 
+let balasX = []
+
+function preload(){//carga de imagenes
+fondo= loadImage("./data/fondo.jpg")
 }
 
-function draw() {
-  programa()
-}
 
-function preload() {
-    pantallas=1
-    
+function setup() {   
+  pantallas=1
+  
     w=window.innerWidth
     h=window.innerHeight
 
@@ -43,22 +60,70 @@ function preload() {
 
     posXDelJugador=100
     posYDelJugador=500
-    posXDelDisparo=posXDelJugador+50
-    posYDelDisparo=500
     
-
-    colorBoton=255
-    colorTexto=0
+    velocidadFondo=3
+    posXDelFondo=0
+ 
+ 
 
     okVidas=false
     okTiempo=false
     okGano=false
+    disparar=false
+    recargar=true
+    
+    
 
     minutos=2
     intervalo=60
     segundos=0
     tiempoEnPantalla="3:00"
+    
+    textSize(100)
+    textAlign(CENTER)
+    rectMode(CENTER)
+   imageMode(CENTER)
+    
+    for(let i=0; i<balasX.length;i++){
+      balasX[i]= windowWidth
+    }
+    for (let i=1;i<=3;i++){
+      enemigos[i]=i
+    }
+    
+    createCanvas(w, h)
+    fondo.resize(w,h)
 }
+
+function draw() {
+  image(fondo,0,0)
+  programa()
+}
+
+//function preload() {
+//      posXDelJugador=100
+//    posYDelJugador=500
+ 
+    
+
+//    colorBoton=255
+//    colorTexto=0
+
+//    okVidas=false
+//    okTiempo=false
+//    okGano=false
+//    disparar=false
+//    recargar=true
+    
+    
+
+//    minutos=2
+//    intervalo=60
+//    segundos=0
+//    tiempoEnPantalla="3:00"
+    
+   
+//}
 function mousePressed() {
   pantallas++
     print(mouseX, mouseY)
@@ -81,11 +146,12 @@ function keyPressed() {
   }
   if(key==" "){
     print("FUEGO!!!")
-  okDisparo=true
+  disparar=true
   }
   if((key=="r")||(key=="R")){
-  pantallas=2
   preload()
+    pantallas=2
+
   }
 }
 function keyReleased() {
@@ -103,6 +169,6 @@ function keyReleased() {
   }
   if(key==" "){
     print("ALTO EL FUEGO!!")
-  okDisparo=false
+  disparar=false
   }
 }
