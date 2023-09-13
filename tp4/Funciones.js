@@ -79,14 +79,16 @@ function disparo(posX, posY) {
 }
 
 function fondoEnMovimiento() {
-  push()
+    posXDelFondo-=5
+    if (posXDelFondo<=-width) {
+    posXDelFondo=0
+  }
+    push()
     scale(2)
     image(fondo, posXDelFondo, 0)
+    image(fondo,posXDelFondo+width,0)
+    image(fondo,posXDelFondo+width*2,0)
     pop()
-    posXDelFondo-=5
-    if (posXDelFondo<=-fondo.width) {
-    posXDelFondo=window.innerWidth
-  }
 }
 
 function interfaz() {
