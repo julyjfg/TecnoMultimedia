@@ -1,20 +1,25 @@
 let juego
-  let personaje
+
   function setup() {
   createCanvas(windowWidth, windowHeight)
+    rectMode(CENTER)
+    textAlign(CENTER)
     juego= new Juego()
-    personaje = new Personaje()
 }
-
 
 function draw() {
-  background(127)
-    personaje.dibujar()
+  juego.play()
 }
-
 function keyPressed() {
-  personaje.keyPressed()
+  juego.keyPressed()
 }
 function keyReleased() {
-  personaje.keyReleased()
+  juego.keyReleased()
+}
+function mousePressed() {
+  juego.mousePressed()
+}
+
+function mouseMoved() {
+  juego.mouseMoved()
 }

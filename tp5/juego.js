@@ -1,17 +1,21 @@
 class Juego {
   constructor() {
-    this.estado=new Estado()
-    this.personaje=new Personaje()
+    this.estado= new Estado()
+
   }
   play(){
-    //this.estado.cambioDeEstado()
-    background(127)
-    this.personaje.dibujar()
+    this.estado.cambioDeEstado()
   }
   mousePressed(){
   this.estado.mousePressed()
   }
+  mouseMoved(){
+  this.estado.mouseMoved()
+  }
   keyPressed(){
-  this.personaje.keyPressed()
+  this.estado.keyPressed()
+  }
+  keyReleased(){
+  this.estado.keyReleased()
   }
 }

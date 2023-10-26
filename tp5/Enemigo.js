@@ -1,14 +1,22 @@
-class Enemigo{
-constructor(){
-this.posX=0
-this.posY=0
-this.okDanio=false
-}
-dibujar(){
-
-}
-movimiento(){
-
-}
-
+class Enemigo {
+  constructor() {
+    this.posX=300
+      this.carriles=[300, 500, 600, 700, 800]
+      this.posY=random(this.carriles)
+      this.tam=50
+  }
+  actualizar() {
+    this.movimiento()
+  }
+  dibujar() {
+    this.actualizar()
+      ellipse(this.posX, this.posY, this.tam)
+      if (this.posX>windowWidth) {
+      this.posX=300
+        this.posY=random(this.carriles)
+    }
+  }
+  movimiento() {
+    this.posX+=random(0.5, 5.5)
+  }
 }
