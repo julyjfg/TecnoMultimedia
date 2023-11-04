@@ -34,7 +34,7 @@ class Interfaz {
         push()
         fill(255)
         textSize(80)
-        text(this.tiempoEnPantalla, 1400, 110)
+        text(this.tiempoEnPantalla,110, 110)
         pop()
         if (this.segundos==0 && this.minutos==0) {
         this.okTiempo=true

@@ -1,7 +1,7 @@
 class Enemigo {
   constructor() {
     this.posX=300
-      this.carriles=[200,300, 500, 600, 700, 800,900]
+      this.carriles=[200,300, 500, 600, 700]
       this.posY=random(this.carriles)
       this.tam=50
   }
