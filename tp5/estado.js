@@ -2,6 +2,7 @@ class Estado {
 
   constructor() {
     this.pantalla=0
+    this.okHit=false
       this.enemigosEliminados=0
       this.fondos= new Fondos()
       this.interfaz=new Interfaz()
@@ -41,6 +42,7 @@ class Estado {
       this.personaje.dibujar()
         this.disparo.dibujar(this.personaje.posX, this.personaje.posY, this.enemigos)
         print("enemigos eliminados:"+this.disparo.enemigosEliminados)
+        this.interfaz.dibujar(this.disparo.enemigosEliminados)
         if (this.interfaz.okTiempo) {
         this.pantalla=2
           this.interfaz.actualizar()

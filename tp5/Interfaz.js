@@ -1,6 +1,7 @@
 class Interfaz {
   constructor() {
-    this.posX=windowWidth/2
+    this.hit=0
+      this.posX=windowWidth/2
       this.posY=90
       this.ancho=1500
       this.largo=150
@@ -17,15 +18,25 @@ class Interfaz {
       this.minutos=1
       this.tiempoEnPantalla=0
       this.okTiempo=false
+      this.Hit=0
   }
-  dibujar() {
-    push()
+  dibujar(golpes) {
+      this.okHit=golpe
+      push()
       fill(90)
       rect(this.posX, this.posY, this.ancho, this.largo, this.angulo)
       pop()
       this.tiempo()
+      this.contadorDeHit(golpes)
+    }
   }
-  contadorDeHit() {
+  contadorDeHit(golpes) {
+    this.hit=golpes
+      push()
+      fill(255)
+      textSize(80)
+      text(this.hit, 110, 310)
+      pop()
   }
   tiempo() {
     if (!this.okTiempo) {
@@ -34,7 +45,7 @@ class Interfaz {
         push()
         fill(255)
         textSize(80)
-        text(this.tiempoEnPantalla,110, 110)
+        text(this.tiempoEnPantalla, 110, 110)
         pop()
         if (this.segundos==0 && this.minutos==0) {
         this.okTiempo=true
