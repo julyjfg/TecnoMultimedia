@@ -1,16 +1,18 @@
 class Enemigo {
   constructor() {
     this.posX=300
-      this.carriles=[200,300, 500, 600, 700]
+      this.carriles=[200,250,300,350,400,450,500,550,600,650,700,750]
       this.posY=random(this.carriles)
       this.tam=50
+      this.largo=100
+      this.imagen=loadImage("assets/pretendiente.png")
   }
   actualizar() {
     this.movimiento()
   }
   dibujar() {
     this.actualizar()
-      ellipse(this.posX, this.posY, this.tam)
+      image(this.imagen,this.posX, this.posY, this.tam,this.largo)
       if (this.posX>windowWidth) {
       this.posX=300
         this.posY=random(this.carriles)

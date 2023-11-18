@@ -1,6 +1,7 @@
 class Fondos {
   constructor() {
-    this.inicio=loadImage("assets/Inicio.png")
+      this.inicio=loadImage("assets/Inicio.png")
+      this.juego=loadImage("assets/piso.jpg")
       this.ganaste=loadImage("assets/Ganaste.png")
 
       this.posXBoton=windowWidth/2
@@ -9,7 +10,6 @@ class Fondos {
       this.alto=90
       this.colorBoton=color(175, 23, 23)
       this.colorTexto=color(255)
-
       this.okBoton=false
   }
   fondoInicio() {
@@ -30,12 +30,12 @@ class Fondos {
       text("Iniciar", this.posXBoton, this.posYBoton+10)
       pop()
   }
-  fondoGanaste() {
+  fondoGanaste(cant) {
     image(this.ganaste, 0, 0, width, height)
       push()
       textSize(100)
       fill(255, 0, 0)
-      text("No ha sobrevivido ningun pretendiente\nla paz vuelve a Itaca", windowWidth/2, windowHeight/2-400)
+      text("No ha sobrevivido ningun pretendiente\nla paz vuelve a Itaca\nPretendientes muertos"+cant, windowWidth/2, windowHeight/2-400)
       pop()
       push()
       fill(this.colorBoton)
@@ -47,6 +47,9 @@ class Fondos {
       textSize(50)
       text("Reiniciar", this.posXBoton, this.posYBoton+10)
       pop()
+  }
+  fondoJuego(){
+    image(this.juego,0,0,width,height)
   }
   mouseMoved() {
     if ((mouseX>this.posXBoton-this.ancho/2)&&(mouseX<+this.posXBoton+this.ancho/2)&&(mouseY>this.posYBoton-this.alto/2)&&(mouseY<this.posYBoton+this.alto/2)) {

@@ -1,23 +1,29 @@
 class Personaje {
   constructor() {
-    this.posX=100
+      this.posX=100
       this.posY=windowHeight/2
-      this.tamanio=50
+      this.ancho=100
+      this.largo=200
+      this.imagen=loadImage("assets/Odiseo.png")
   }
   actualizar() {
     this.mover()
   }
   dibujar() {
     this.actualizar()
-      rect(this.posX, this.posY, this.tamanio)
+      image(this.imagen,this.posX, this.posY-85, this.ancho,this.largo)
   }
   
   mover() {
     if (this.okIzquierda) {
-      this.posY-=5
+      if(this.posY>200){
+        this.posY-=5
+      }
     }
     if (this.okDerecha) {
-      this.posY+=5
+      if(this.posY<750){
+        this.posY+=5
+      }
     }
   }
   keyPressed() {

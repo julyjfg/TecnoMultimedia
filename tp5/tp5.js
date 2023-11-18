@@ -1,3 +1,10 @@
+/*
+Julian Ferrari Goñi
+93052/3
+
+*/
+
+
 let juego
 
   function setup() {
