@@ -3,8 +3,9 @@ class Textos {
     this.textos=[]
       this.texto=" "
       this.generarTextos()
+     
   }
-  cargarTextos(pantallas) {
+  cargarTextos(pantallas,hitPretendientes) {
     switch(pantallas) {
     case 0:
       push()
@@ -24,7 +25,7 @@ class Textos {
         push()
         noStroke()
         fill(127,150)
-        rect(width/2, 150,1000,200)
+        rect(width/2, 150,1000,200,50)
         pop()
         push()
         textSize(30)
@@ -36,7 +37,7 @@ class Textos {
         push()
         noStroke()
         fill(127,150)
-        rect(width/2, 160,1000,200)
+        rect(width/2, 160,1000,200,50)
         pop()
         push()
         textSize(30)
@@ -48,7 +49,7 @@ class Textos {
         push()
         noStroke()
         fill(127,150)
-        rect(width/2, 160,1000,200)
+        rect(width/2, 160,1000,200,50)
         pop()
         push()
         textSize(30)
@@ -60,7 +61,7 @@ class Textos {
         push()
         noStroke()
         fill(127,150)
-        rect(width/2, 160,1000,200)
+        rect(width/2, 160,1000,200,50)
         pop()
         push()
         textSize(30)
@@ -72,7 +73,7 @@ class Textos {
         push()
         noStroke()
         fill(127,150)
-        rect(width/2, 160,1000,200)
+        rect(width/2, 160,1000,200,50)
         pop()
         push()
         textSize(30)
@@ -84,7 +85,7 @@ class Textos {
         push()
         noStroke()
         fill(127,150)
-        rect(width/2, 160,1000,200)
+        rect(width/2, 160,1000,200,50)
         pop()
         push()
         textSize(30)
@@ -96,7 +97,7 @@ class Textos {
         push()
         noStroke()
         fill(127,150)
-        rect(width/2, 160,1000,300)
+        rect(width/2, 160,1000,300,50)
         pop()
         push()
         textSize(30)
@@ -108,7 +109,7 @@ class Textos {
         push()
         noStroke()
         fill(127,150)
-        rect(width/2, 160,1000,300)
+        rect(width/2, 160,1000,300,50)
         pop()
         push()
         textSize(30)
@@ -120,7 +121,7 @@ class Textos {
         push()
         noStroke()
         fill(127,150)
-        rect(width/2, 160,1000,250)
+        rect(width/2, 160,1000,250,50)
         pop()
         push()
         textSize(30)
@@ -132,7 +133,7 @@ class Textos {
         push()
         noStroke()
         fill(127,150)
-        rect(width/2, 160,1265,100)
+        rect(width/2, 345,1265,500,50)
         pop()
         push()
         textSize(50)
@@ -144,24 +145,24 @@ class Textos {
         push()
         noStroke()
         fill(127,150)
-        rect(width/2, 160,1000,300)
+        rect(width/2, 200,1000,300,50)
         pop()
         push()
         textSize(30)
         fill(0, 255, 0)
-        text(this.textos[pantallas], width/2, 90)
+        text("Penélope duda de la identidad de Odiseo y pide una prueba más.\nOdiseo revela un secreto sobre su cama que solo ellos conocen,\nPenélope finalmente reconoce a su esposo. Ambos se reencuentran\ncon gran alegría y se cuentan sus experiencias durante la separación.\nOdiseo también se reencuentra con su padre Laertes.\nLa paz y la prosperidad vuelven a Ítaca.\nPretendientes muertos:"+hitPretendientes, width/2, 90)
         pop()
       break
       case 14:
         push()
         noStroke()
         fill(127,150)
-        rect(width/2, 160,1000,180)
+        rect(width/2, 160,1000,180,50)
         pop()
         push()
         textSize(30)
         fill(0, 255, 0)
-        text(this.textos[pantallas], width/2, 100)
+        text("Los pretendientes llegaron a escapar para buscar ayuda para\nmatar a Odiseo y su familia. Sufre una doloroza derrota.\nItaca caen en caos\nPretendientes muertos:"+hitPretendientes, width/2, 100)
         pop()
       break
     }
@@ -208,13 +209,7 @@ class Textos {
       this.texto="Con determinación y habilidad, Odiseo tensa el arco con facilidad y\ndispara la flecha con precisión a través de los aros de doce hachas.\n El silencio cae sobre la sala mientras todos contemplan el\n increíble logro de Odiseo. Los pretendientes quedan atónitos y se\n dan cuenta de su error al subestimar al mendigo. El destino de Ítaca\n da un giro repentino."
         break
       case 11:
-      this.texto="Objetivo:Mata a los pretendientes antes de que escapen"
-        break
-      case 13:
-      this.texto="Penélope duda de la identidad de Odiseo y pide una prueba más.\nOdiseo revela un secreto sobre su cama que solo ellos conocen,\nPenélope finalmente reconoce a su esposo. Ambos se reencuentran\ncon gran alegría y se cuentan sus experiencias durante la separación.\nOdiseo también se reencuentra con su padre Laertes.\nLa paz y la prosperidad vuelven a Ítaca."
-        break
-      case 14:
-      this.texto="Los pretendientes llegaron a escapar para buscar ayuda para\nmatar a Odiseo y su familia. Sufre una doloroza derrota.\nItaca caen en caos"
+      this.texto="Objetivo:Mata a los pretendientes antes de que escapen\n\nControles\n\nMovimiento:Flechas arriba y abajo\n\nDisparo:Barra Espaciadora"
         break
     }
   }

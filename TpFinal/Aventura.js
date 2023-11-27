@@ -2,13 +2,22 @@ class Aventura {
   constructor() {
     this.fondos= new Fondos()
       this.botones=new Botones()
+      this.juego= new Juego()
       this.textos=new Textos()
       this.pantallas=0
   }
   dibujar() {
     this.fondos.cargarFondos(this.pantallas)
       this.botones.cargarBotones(this.pantallas)
-      this.textos.cargarTextos(this.pantallas)
+      this.juego.dibujar(this.pantallas)
+      this.textos.cargarTextos(this.pantallas,this.juego.disparo.enemigosEliminados)
+      if(this.juego.okFinalTiempo){
+      this.pantallas++
+      this.juego.okFinalTiempo=false
+      }else if(this.juego.okEscaparon){
+      this.pantallas=14
+      this.juego.okEscaparon=false
+      }
   }
   cambioDePantallas() {
     switch(this.pantallas) {
@@ -127,7 +136,8 @@ class Aventura {
       break
       case 11:
         if (this.botones.okJuego) {
-          this.pantallas=13
+          this.pantallas++
+          this.juego.reinciarJuego()
           this.botones.okJuego=false
           this.botones.colorBotonJuego=color(255)
           this.botones.colorTextoJuego=color(0)
@@ -144,6 +154,7 @@ class Aventura {
       case 14:
         if (this.botones.okReiniciarJuego) {
           this.pantallas=12
+          this.juego.reinciarJuego()
           this.botones.okReiniciarJuego=false
           this.botones.colorBotonReiniciarJuego=color(255)
           this.botones.colorTextoReiniciarJuego=color(0)
@@ -151,6 +162,12 @@ class Aventura {
       break
     }
   }
+  keyPressed() {
+     this.juego.keyPressed()
+   }
+   keyReleased(){
+  this.juego.keyReleased()
+   }
     mouseMoved() {
       this.botones.mouseMoved(this.pantallas)
     }

@@ -5,6 +5,7 @@ class Enemigo {
       this.posY=random(this.carriles)
       this.tam=50
       this.largo=100
+      this.escapo=false
       this.imagen=loadImage("assets/pretendiente.png")
   }
   actualizar() {
@@ -14,8 +15,7 @@ class Enemigo {
     this.actualizar()
       image(this.imagen,this.posX, this.posY, this.tam,this.largo)
       if (this.posX>windowWidth) {
-      this.posX=300
-        this.posY=random(this.carriles)
+      this.escapo=true
     }
   }
   movimiento() {

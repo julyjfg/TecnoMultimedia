@@ -6,13 +6,12 @@ class App {
   play() {
     this.aventura.dibujar()
   }
-  /*
-  function keyPressed() {
+ keyPressed() {
    this.aventura.keyPressed()
    }
-   function keyReleased() {
+ keyReleased() {
    this.aventura.keyReleased()
-   }*/
+   }
   mousePressed() {
     this.aventura.mousePressed()
   }

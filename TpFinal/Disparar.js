@@ -69,26 +69,3 @@ eliminarDisparo(){
     }
   }
 }
-
-    //  for (let i = this.balaX.length - 1; i >= 0; i--) {
-    //  for (let i = this.balaY.length - 1; i >= 0; i--) {
-    //    for (let j = enemigos.length - 1; j >= 0; j--) {
-    //      const distancia =dist(this.balaX[i],
-    //        this.balaY[i],
-    //        enemigos[j].posX,
-    //        enemigos[j].posY
-    //        )
-    //        if (distancia < this.tam) {
-    //        print("llegue")
-    //          this.balaX.splice(i, 1)
-    //          this.balaY.splice(i, 1)
-    //          this.hit=true
-    //          if (this.hit) {
-    //          this.actualizarEnemigosEliminados()
-    //            this.hit=false
-    //        }
-    //      }
-    //    }
-    //  }
-    //}
-    // Dibuja las balas

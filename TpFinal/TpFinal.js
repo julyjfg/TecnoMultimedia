@@ -10,16 +10,15 @@ let app
 
 function draw() {
   background(0)
-
     app.play()
 }
 
-/*function keyPressed() {
+function keyPressed() {
  app.keyPressed()
  }
  function keyReleased() {
  app.keyReleased()
- }*/
+ }
 function mousePressed() {
   app.mousePressed()
 }
