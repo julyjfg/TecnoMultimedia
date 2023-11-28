@@ -3,6 +3,10 @@ class Textos {
     this.textos=[]
       this.texto=" "
       this.generarTextos()
+      this.fuente=loadFont("assets/smallburg-Italic.ttf")
+      textFont(this.fuente)
+      this.colorTextoInicio=color(137, 59, 59)
+      this.colorTexto=color(100,32,32)
      
   }
   cargarTextos(pantallas,hitPretendientes) {
@@ -10,14 +14,14 @@ class Textos {
     case 0:
       push()
         textSize(100)
-        fill(0, 255, 0)
+        fill(this.colorTextoInicio)
         text(this.textos[pantallas], width/2, 200)
         pop()
         break
       case 1:
       push()
         textSize(50)
-        fill(0, 255, 0)
+        fill(this.colorTextoInicio)
         text(this.textos[pantallas], width/2, 300)
         pop()
         break
@@ -29,7 +33,7 @@ class Textos {
         pop()
         push()
         textSize(30)
-        fill(0, 255, 0)
+        fill(this.colorTexto)
         text(this.textos[pantallas], width/2, 100)
         pop()
         break
@@ -41,7 +45,7 @@ class Textos {
         pop()
         push()
         textSize(30)
-        fill(0, 255, 0)
+        fill(this.colorTexto)
         text(this.textos[pantallas], width/2, 100)
         pop()
        break
@@ -53,7 +57,7 @@ class Textos {
         pop()
         push()
         textSize(30)
-        fill(0, 255, 0)
+        fill(this.colorTexto)
         text(this.textos[pantallas], width/2, 100)
         pop()
         break
@@ -65,7 +69,7 @@ class Textos {
         pop()
         push()
         textSize(30)
-        fill(0, 255, 0)
+        fill(this.colorTexto)
         text(this.textos[pantallas], width/2, 100)
         pop()
         break
@@ -77,7 +81,7 @@ class Textos {
         pop()
         push()
         textSize(30)
-        fill(0, 255, 0)
+        fill(this.colorTexto)
         text(this.textos[pantallas], width/2, 100)
         pop()
       break
@@ -89,7 +93,7 @@ class Textos {
         pop()
         push()
         textSize(30)
-        fill(0, 255, 0)
+        fill(this.colorTexto)
         text(this.textos[pantallas], width/2, 100)
         pop()
       break
@@ -101,7 +105,7 @@ class Textos {
         pop()
         push()
         textSize(30)
-        fill(0, 255, 0)
+        fill(this.colorTexto)
         text(this.textos[pantallas], width/2, 90)
         pop()
       break
@@ -113,7 +117,7 @@ class Textos {
         pop()
         push()
         textSize(30)
-        fill(0, 255, 0)
+        fill(this.colorTexto)
         text(this.textos[pantallas], width/2, 80)
         pop()
       break
@@ -125,7 +129,7 @@ class Textos {
         pop()
         push()
         textSize(30)
-        fill(0, 255, 0)
+        fill(this.colorTexto)
         text(this.textos[pantallas], width/2, 80)
         pop()
       break
@@ -137,7 +141,7 @@ class Textos {
         pop()
         push()
         textSize(50)
-        fill(0, 255, 0)
+        fill(this.colorTexto)
         text(this.textos[pantallas], width/2, 160)
         pop()
       break
@@ -149,7 +153,7 @@ class Textos {
         pop()
         push()
         textSize(30)
-        fill(0, 255, 0)
+        fill(this.colorTexto)
         text("Penélope duda de la identidad de Odiseo y pide una prueba más.\nOdiseo revela un secreto sobre su cama que solo ellos conocen,\nPenélope finalmente reconoce a su esposo. Ambos se reencuentran\ncon gran alegría y se cuentan sus experiencias durante la separación.\nOdiseo también se reencuentra con su padre Laertes.\nLa paz y la prosperidad vuelven a Ítaca.\nPretendientes muertos:"+hitPretendientes, width/2, 90)
         pop()
       break
@@ -161,7 +165,7 @@ class Textos {
         pop()
         push()
         textSize(30)
-        fill(0, 255, 0)
+        fill(this.colorTexto)
         text("Los pretendientes llegaron a escapar para buscar ayuda para\nmatar a Odiseo y su familia. Sufre una doloroza derrota.\nItaca caen en caos\nPretendientes muertos:"+hitPretendientes, width/2, 100)
         pop()
       break

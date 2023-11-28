@@ -11,12 +11,12 @@ class Personaje {
   }
   dibujar() {
     this.actualizar()
-      image(this.imagen,this.posX, this.posY-85, this.ancho,this.largo)
+      image(this.imagen,this.posX, this.posY-75, this.ancho,this.largo)
   }
   
   mover() {
     if (this.okIzquierda) {
-      if(this.posY>200){
+      if(this.posY>300){
         this.posY-=5
       }
     }
