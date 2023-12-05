@@ -8,6 +8,8 @@ class Disparar {
       this.tam=100
       this.hit=false
       this.bala=loadImage("assets/Arrow.png")
+      this.sonido=loadSound('assets/ArrowAttack1.wav')
+      this.sonido.setVolume(0.2)
   }
   dibujar(posX, posY) {
     this.posXBalaConPersonaje = posX
@@ -49,17 +51,22 @@ class Disparar {
 eliminarDisparo(){
  for (let i = this.balaX.length - 1; i >= 0; i--){
    for (let i = this.balaY.length - 1; i >= 0; i--){
-    this.balaX.splice(i, 1)
+     this.balaX.splice(i, 1)
     this.balaY.splice(i, 1)
     this.recargar = true
+    this.sonido.stop()
    }
  }  
 }
   keyPressed() {
     if (key === " ") {
       this.disparando = true
+      if(!this.sonido.isPlaying()){
+      this.sonido.play()
+    }
         print("BANG")
     }
+    
   }
 
   keyReleased() {
