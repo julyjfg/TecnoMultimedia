@@ -6,7 +6,7 @@ class Textos {
       this.fuente=loadFont("assets/smallburg-Italic.ttf")
       textFont(this.fuente)
       this.colorTextoInicio=color(137, 59, 59)
-      this.colorTexto=color(100,32,32)
+      this.colorTexto=color(209,25,25)
      
   }
   cargarTextos(pantallas,hitPretendientes) {
@@ -28,7 +28,7 @@ class Textos {
       case 2:
         push()
         noStroke()
-        fill(127,150)
+        fill(127,200)
         rect(width/2, 150,1000,200,50)
         pop()
         push()
@@ -40,7 +40,7 @@ class Textos {
       case 3:
         push()
         noStroke()
-        fill(127,150)
+        fill(127,200)
         rect(width/2, 160,1000,200,50)
         pop()
         push()
@@ -52,7 +52,7 @@ class Textos {
       case 4:
         push()
         noStroke()
-        fill(127,150)
+        fill(127,200)
         rect(width/2, 160,1000,200,50)
         pop()
         push()
@@ -64,7 +64,7 @@ class Textos {
       case 5:
         push()
         noStroke()
-        fill(127,150)
+        fill(127,200)
         rect(width/2, 160,1000,200,50)
         pop()
         push()
@@ -76,7 +76,7 @@ class Textos {
       case 6:
         push()
         noStroke()
-        fill(127,150)
+        fill(127,200)
         rect(width/2, 160,1000,200,50)
         pop()
         push()
@@ -88,7 +88,7 @@ class Textos {
       case 7:
         push()
         noStroke()
-        fill(127,150)
+        fill(127,200)
         rect(width/2, 160,1000,200,50)
         pop()
         push()
@@ -100,7 +100,7 @@ class Textos {
       case 8:
         push()
         noStroke()
-        fill(127,150)
+        fill(127,200)
         rect(width/2, 160,1000,300,50)
         pop()
         push()
@@ -112,7 +112,7 @@ class Textos {
       case 9:
         push()
         noStroke()
-        fill(127,150)
+        fill(127,200)
         rect(width/2, 160,1000,300,50)
         pop()
         push()
@@ -124,7 +124,7 @@ class Textos {
       case 10:
         push()
         noStroke()
-        fill(127,150)
+        fill(127,200)
         rect(width/2, 160,1000,250,50)
         pop()
         push()
@@ -136,7 +136,7 @@ class Textos {
       case 11:
         push()
         noStroke()
-        fill(127,150)
+        fill(127,200)
         rect(width/2, 345,1265,500,50)
         pop()
         push()
@@ -148,7 +148,7 @@ class Textos {
       case 13:
         push()
         noStroke()
-        fill(127,150)
+        fill(127,200)
         rect(width/2, 200,1000,300,50)
         pop()
         push()
@@ -160,7 +160,7 @@ class Textos {
       case 14:
         push()
         noStroke()
-        fill(127,150)
+        fill(127,200)
         rect(width/2, 160,1000,180,50)
         pop()
         push()
