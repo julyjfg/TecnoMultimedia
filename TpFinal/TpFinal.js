@@ -8,7 +8,6 @@ function setup() {
 }
 
 function draw() {
-  background(0)
     app.play()
 }
 

@@ -29,7 +29,7 @@ class Aventura {
     case 0:
       if (this.botones.okIniciarAvent) {
         this.activarSonidoBoton()
-        this.activarSonidoAventura()
+          this.activarSonidoAventura()
           this.pantallas=2
           this.botones.okIniciarAvent=false
           this.botones.colorBotonIniciarAvent=color(255)
@@ -93,8 +93,8 @@ class Aventura {
           this.botones.colorTextoVolver=color(0)
       } else if (this.botones.okReiniciar) {
         this.activarSonidoBoton()
-        this.detenerSonidoAventura()
-        this.activarSonidoAventura()
+          this.detenerSonidoAventura()
+          this.activarSonidoAventura()
           this.pantallas=2
           this.botones.colorBotonReiniciar=color(255)
           this.botones.colorTextoReiniciar=color(0)
@@ -143,8 +143,8 @@ class Aventura {
           this.botones.colorTextoVolver=color(0)
       } else if (this.botones.okReiniciar) {
         this.activarSonidoBoton()
-        this.detenerSonidoAventura()
-        this.activarSonidoAventura()
+          this.detenerSonidoAventura()
+          this.activarSonidoAventura()
           this.pantallas=2
           this.botones.colorBotonReiniciar=color(255)
           this.botones.colorTextoReiniciar=color(0)
@@ -163,8 +163,8 @@ class Aventura {
       case 11:
       if (this.botones.okJuego) {
         this.activarSonidoBoton()
-        this.detenerSonidoAventura()
-        this.activarSonidoJuego()
+          this.detenerSonidoAventura()
+          this.activarSonidoJuego()
           this.pantallas++
           this.juego.reinciarJuego()
           this.botones.okJuego=false
@@ -175,7 +175,7 @@ class Aventura {
       case 13:
       if (this.botones.okInicio) {
         this.activarSonidoBoton()
-        this.detenerSonidoJuego()
+          this.detenerSonidoJuego()
           this.pantallas=0
           this.botones.okInicio=false
           this.botones.colorBotonInicio=color(255)
@@ -185,8 +185,8 @@ class Aventura {
       case 14:
       if (this.botones.okReiniciarJuego) {
         this.activarSonidoBoton()
-        this.detenerSonidoJuego()
-        this.activarSonidoJuego()
+          this.detenerSonidoJuego()
+          this.activarSonidoJuego()
           this.pantallas=12
           this.juego.reinciarJuego()
           this.botones.okReiniciarJuego=false
